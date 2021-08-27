@@ -18,7 +18,7 @@ public class Main extends JavaPlugin implements Listener {
 	public void onEnable() {
 		System.out.println("by EclipseBETA");
 		getServer().getPluginManager().registerEvents(this, this);
-		scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
+		scoreboard = getServer().getScoreboardManager().getMainScoreboard();
 			initializeTeam("red", ChatColor.RED.toString());
 			initializeTeam("white", ChatColor.WHITE.toString());
 			initializeTeam("green", ChatColor.GREEN.toString());
@@ -38,22 +38,22 @@ public class Main extends JavaPlugin implements Listener {
         ItemStack item = e.getEntity().getItemStack();
         if (item.getItemMeta().hasLore()) {
 			for (String lore : item.getItemMeta().getLore()) {
-				if (lore.contains("¿œπ›")) {
+				if (lore.contains("ÏùºÎ∞ò")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("white").addEntry(e.getEntity().getUniqueId().toString());
-				} else if(lore.contains("»Ò±Õ")) {
+				} else if(lore.contains("Ìù¨Í∑Ä")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("green").addEntry(e.getEntity().getUniqueId().toString());
-				} else if(lore.contains("ø°«»")) {
+				} else if(lore.contains("ÏóêÌîΩ")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("purple").addEntry(e.getEntity().getUniqueId().toString());
-				} else if(lore.contains("¿¸º≥")) {
+				} else if(lore.contains("Ï†ÑÏÑ§")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("gold").addEntry(e.getEntity().getUniqueId().toString());
-				} else if(lore.contains("Ω≈»≠")) {
+				} else if(lore.contains("Ïã†Ìôî")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("red").addEntry(e.getEntity().getUniqueId().toString());
-				} else if(lore.contains("ƒ≥Ω√")) {
+				} else if(lore.contains("Ï∫êÏãú")) {
 					e.getEntity().setGlowing(true);
 					scoreboard.getTeam("yellow").addEntry(e.getEntity().getUniqueId().toString());
 				}
